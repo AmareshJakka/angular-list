@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@nebular/theme/styles/prebuilt/default.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-list"
+    }
+  },
+  "defaultProject": "angular-list",
+  "cli": {
+    "analytics": "920cdd0c-5726-4b08-a01f-954f857dceb7"
+  }
 }

@@ -1,0 +1,28 @@
+<div *ngIf="list">
+    <div class ="container" *ngFor="let item of list.entries">
+        
+           <div > 
+               <img  class="img" alt="monster" src ="https://robohash.org/2?set=set2&size=50x50"/>
+            </div>
+            <div>
+                <p class="title"><b>BookName: </b>{{item.name}}</p>
+                <p class="edition"><b>BookEdition: </b>{{item.edition_count}}</p>
+                <p class="edition"><b>Last updated on : </b>{{item.last_update | date: 'dd/MM/yyyy'}}</p>
+            </div>
+            <div >
+                <button  class="details" (click)="open(item)"nbButton shape="round" size="small" status="success">Details</button>
+            </div>
+            
+           
+    </div>
+</div>
+
+<ng-template #contentTemplate let-data>
+    <ul>
+        <li>{{data.item.name}}</li>
+        <li>{{data.item.edition_count}}</li>
+        <li>{{data.item.seed_count}}</li>
+        <li>{{data.item.last_update | date: 'dd/MM/yyyy'}}</li>
+    </ul>
+  </ng-template>
+
